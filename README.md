@@ -9,7 +9,7 @@ It should work on other IOx supported platforms with an integrated GPS (IR807/IR
 
 ## The scenario
 
-Given the GPS capabilities of the IR800 platform, there's already a provided GPS microservice that exposes a REST API and a websocket interface (https://developer.cisco.com/docs/iox/#!gps-service-architecture). However, many apps use and rely on the GPSd proyect.
+Given the GPS capabilities of the IR800 platform, there's already a provided GPS microservice that exposes a REST API and a websocket interface (https://developer.cisco.com/docs/iox/#!gps-service-architecture). However, many apps use and rely on the GPSd project.
 
 This microservice allows clients that consume data from a GPSd source to use the router GPS data.
 
