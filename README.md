@@ -13,8 +13,8 @@ Given the GPS capabilities of the IR8x9 platform, there's already a provided GPS
 
 ## Installing/Running the service
 
-Just install the package via IOxclient or Local Manager (not tested yet on Cisco Kinetic GMM, but it should work).
-Once running, it will listen on TCP port 2947. 
+Just install/activate/start the package via IOxclient or Local Manager (not tested yet on Cisco Kinetic GMM, but it should work).
+Once running, the GPSd service will be listening on TCP port 2947. 
 
 Keep in mind that a nat portmapping might be neeed on router side.
 
