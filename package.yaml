@@ -1,15 +1,18 @@
-descriptor-schema-version: "2.5"
+descriptor-schema-version: "2.7"
 
 info:
   name: IOxGPSd
   description: GPSd Service
-  version: "0.9"
+  version: "0.92"
   author-link: "http://www.cisco.com"
   author-name: "Cisco Systems"
 
 app:
   # Indicate app type (vm, paas, lxc etc.,)
   cpuarch: "x86_64"
+  env:
+    PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin
+
   type: docker
 
   resources:
@@ -32,4 +35,10 @@ app:
   # Specify runtime and startup
   startup:
     rootfs: rootfs.tar
-    target: ["/usr/sbin/gpsd -b -G -n /dev/ttyS4"]
+    #target: "/usr/sbin/gpsd -b -G -n /dev/ttyS4"
+    target: 
+      - "/usr/sbin/gpsd"
+    args:
+      - "-N -b -G -n /dev/ttyS4"
+    #os-mode: true
+    

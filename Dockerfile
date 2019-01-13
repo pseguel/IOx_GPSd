@@ -1,3 +1,4 @@
 FROM alpine:3.8
-RUN apk add gpsd 
-CMD gpsd /dev/ttyS4 
+RUN apk add --update gpsd
+EXPOSE 2947 
+CMD ["gpsd", "-b -G -n /dev/ttyS4"]
